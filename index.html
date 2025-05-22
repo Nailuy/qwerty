@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛАБОРАТОРНА РОБОТА №4</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            padding: 20px 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 6px 10px;
+        }
+
+        .comment {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #2e2e2e;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            color: #fff;
+        }
+
+        .modal form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal input, .modal textarea, .modal button {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 1em;
+        }
+
+        .modal button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Перемкнути тему</button>
+
+    <div class="container">
+        <h1>Лабораторна Робота №4</h1>
+
+        <section id="comments">
+            <h2>Коментарі роботодавців</h2>
+            <div id="comments-container"></div>
+        </section>
+
+        <div class="modal" id="feedback-modal" style="display: none;">
+            <form action="https://formspree.io/f/manodwlz" method="POST">
+                <input type="text" name="name" placeholder="Ім’я" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Номер телефону" required>
+                <textarea name="message" placeholder="Ваше повідомлення" rows="4" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+
+        <footer id="footer-info"></footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
 
