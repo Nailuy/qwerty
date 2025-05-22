@@ -1,0 +1,132 @@
+/* === Основні стилі для сторінки === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    padding: 24px 48px;
+}
+
+/* === Заголовок === */
+h1 {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 2em;
+}
+
+/* === Кнопка перемикання теми === */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 14px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #5a5a5a;
+}
+
+/* === Футер === */
+footer {
+    background-color: #f1f1f1;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+body.dark footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* === Модальне вікно === */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #000000;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    max-width: 420px;
+    width: 90%;
+    z-index: 1000;
+}
+
+body.dark .modal {
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modal input,
+.modal textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    transition: box-shadow 0.3s ease;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #66afe9;
+}
+
+.modal button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #5a5a5a;
+}
+
+/* === Коментарі === */
+.comment {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body.dark .comment {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
